@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "postgre_ca_certificate_base64": {
+    "searchPatterns": [
+      "user-provided:projectx-postgresql-1531850583419:ca_certificate_base64",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.ca_certificate_base64",
+      "env:service_postgre:$.ca_certificate_base64",
+      "env:postgre_ca_certificate_base64",
+      "file:/server/localdev-config.json:$.postgre_ca_certificate_base64"
+    ]
+  },
+  "postgre": {
+    "credentials": {
+      "searchPatterns": [
+        "user-provided:projectx-postgresql-1531850583419:uri_direct_1",
+        "cloudfoundry:postgre",
+        "env:postgre_credentials",
+        "file://localdev-config.json:postgre_credentials"
+      ]
+    }
+  },
+  "postgre_db_type": {
+    "searchPatterns": [
+      "user-provided:projectx-postgresql-1531850583419:db_type",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.db_type",
+      "env:service_postgre:$.db_type",
+      "env:postgre_db_type",
+      "file:/server/localdev-config.json:$.postgre_db_type"
+    ]
+  },
+  "postgre_deployment_id": {
+    "searchPatterns": [
+      "user-provided:projectx-postgresql-1531850583419:deployment_id",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.deployment_id",
+      "env:service_postgre:$.deployment_id",
+      "env:postgre_deployment_id",
+      "file:/server/localdev-config.json:$.postgre_deployment_id"
+    ]
+  },
+  "postgre_instance_administration_api_deployment_id": {
+    "searchPatterns": [
+      "user-provided:projectx-postgresql-1531850583419:instance_administration_api_deployment_id",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.instance_administration_api_deployment_id",
+      "env:service_postgre:$.instance_administration_api_deployment_id",
+      "env:postgre_instance_administration_api_deployment_id",
+      "file:/server/localdev-config.json:$.postgre_instance_administration_api_deployment_id"
+    ]
+  },
+  "postgre_instance_administration_api_instance_id": {
+    "searchPatterns": [
+      "user-provided:projectx-postgresql-1531850583419:instance_administration_api_instance_id",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.instance_administration_api_instance_id",
+      "env:service_postgre:$.instance_administration_api_instance_id",
+      "env:postgre_instance_administration_api_instance_id",
+      "file:/server/localdev-config.json:$.postgre_instance_administration_api_instance_id"
+    ]
+  },
+  "postgre_instance_administration_api_root": {
+    "searchPatterns": [
+      "user-provided:projectx-postgresql-1531850583419:instance_administration_api_root",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.instance_administration_api_root",
+      "env:service_postgre:$.instance_administration_api_root",
+      "env:postgre_instance_administration_api_root",
+      "file:/server/localdev-config.json:$.postgre_instance_administration_api_root"
+    ]
+  },
+  "postgre_name": {
+    "searchPatterns": [
+      "user-provided:projectx-postgresql-1531850583419:name",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.name",
+      "env:service_postgre:$.name",
+      "env:postgre_name",
+      "file:/server/localdev-config.json:$.postgre_name"
+    ]
+  },
+  "postgre_uri": {
+    "searchPatterns": [
+      "user-provided:projectx-postgresql-1531850583419:uri",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.uri",
+      "env:service_postgre:$.uri",
+      "env:postgre_uri",
+      "file:/server/localdev-config.json:$.postgre_uri"
+    ]
+  },
+  "postgre_uri_cli": {
+    "searchPatterns": [
+      "user-provided:projectx-postgresql-1531850583419:uri_cli",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.uri_cli",
+      "env:service_postgre:$.uri_cli",
+      "env:postgre_uri_cli",
+      "file:/server/localdev-config.json:$.postgre_uri_cli"
+    ]
+  },
+  "postgre_uri_cli_1": {
+    "searchPatterns": [
+      "user-provided:projectx-postgresql-1531850583419:uri_cli_1",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.uri_cli_1",
+      "env:service_postgre:$.uri_cli_1",
+      "env:postgre_uri_cli_1",
+      "file:/server/localdev-config.json:$.postgre_uri_cli_1"
+    ]
+  },
+  "postgre_uri_direct_1": {
+    "searchPatterns": [
+      "user-provided:projectx-postgresql-1531850583419:uri_direct_1",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.uri_direct_1",
+      "env:service_postgre:$.uri_direct_1",
+      "env:postgre_uri_direct_1",
+      "file:/server/localdev-config.json:$.postgre_uri_direct_1"
+    ]
+  },
+  "weather_company_data_host": {
+    "searchPatterns": [
+      "user-provided:projectx-weatherinsights-1531850881023:host",
+      "cloudfoundry:$['weatherinsights'][0].credentials.host",
+      "env:service_weather_company_data:$.host",
+      "env:weather_company_data_host",
+      "file:/server/localdev-config.json:$.weather_company_data_host"
+    ]
+  },
+  "weather_company_data": {
+    "credentials": {
+      "searchPatterns": [
+        "user-provided:projectx-weatherinsights-1531850881023:username",
+        "cloudfoundry:weather_company_data",
+        "env:weather_company_data_credentials",
+        "file://localdev-config.json:weather_company_data_credentials"
+      ]
+    }
+  },
+  "weather_company_data_password": {
+    "searchPatterns": [
+      "user-provided:projectx-weatherinsights-1531850881023:password",
+      "cloudfoundry:$['weatherinsights'][0].credentials.password",
+      "env:service_weather_company_data:$.password",
+      "env:weather_company_data_password",
+      "file:/server/localdev-config.json:$.weather_company_data_password"
+    ]
+  },
+  "weather_company_data_port": {
+    "searchPatterns": [
+      "user-provided:projectx-weatherinsights-1531850881023:port",
+      "cloudfoundry:$['weatherinsights'][0].credentials.port",
+      "env:service_weather_company_data:$.port",
+      "env:weather_company_data_port",
+      "file:/server/localdev-config.json:$.weather_company_data_port"
+    ]
+  },
+  "weather_company_data_url": {
+    "searchPatterns": [
+      "user-provided:projectx-weatherinsights-1531850881023:url",
+      "cloudfoundry:$['weatherinsights'][0].credentials.url",
+      "env:service_weather_company_data:$.url",
+      "env:weather_company_data_url",
+      "file:/server/localdev-config.json:$.weather_company_data_url"
+    ]
+  },
+  "weather_company_data_username": {
+    "searchPatterns": [
+      "user-provided:projectx-weatherinsights-1531850881023:username",
+      "cloudfoundry:$['weatherinsights'][0].credentials.username",
+      "env:service_weather_company_data:$.username",
+      "env:weather_company_data_username",
+      "file:/server/localdev-config.json:$.weather_company_data_username"
+    ]
+  }
+}
