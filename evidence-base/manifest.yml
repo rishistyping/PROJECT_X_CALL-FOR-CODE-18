@@ -1,0 +1,13 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: EvidenceBase
+  buildpack: python_buildpack
+  command: gunicorn --env DJANGO_SETTINGS_MODULE=EvidenceBase.settings.production EvidenceBase.wsgi -b 0.0.0.0:$PORT
+  memory: 512M
+  domain: eu-gb.mybluemix.net
+  host: python-django-basic-xsdbj
+  services:
+    - evidence-base-weatherinsights-1531938964906
+    - evidence-base-postgresql-1531943532987
