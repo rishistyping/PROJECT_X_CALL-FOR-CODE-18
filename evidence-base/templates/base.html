@@ -26,9 +26,9 @@
 
         <ul class="nav navbar-nav navbar-right">
           {% if user.is_authenticated %}
-            <li><a href="#">Post</a></li>
-            <li><a href="#">Groups</a></li>
-            <li><a href="#">Create Group</a></li>
+            <li><a href="{% url 'evidence:create_evidence' %}">Add Evidence</a></li>
+            <li><a href="#">Add Analysis</a></li>
+            <li><a href="#">Create Category</a></li>
             <li><a href="{% url 'accounts:logout' %}">Log Out</a></li>
           {% else %}
             <li><a href="#">Groups</a></li>
