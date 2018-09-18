@@ -1,6 +1,10 @@
 
 import os
 import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
@@ -10,7 +14,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = '9q%ct+ul86(3#h4kkio5$3bubfr()9=g5qw@8j80kwj7cr0)nd'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 ALLOWED_HOSTS = ['*']
 
@@ -89,6 +93,10 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
                     os.path.join(BASE_DIR, "app", "static"),
+                    # os.path.join(BASE_DIR, "board", "static"),
+                    # os.path.join(BASE_DIR, "attribute", "static"),
+                    # os.path.join(BASE_DIR, "category", "static"),
+                    # os.path.join(BASE_DIR, "evidence", "static"),
                     )
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
@@ -97,16 +105,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 LOGIN_REDIRECT_URL = 'test'
 LOGOUT_REDIRECT_URL = 'thanks'
 
-TIME_ZONE = 'Europe/Istanbul'
+TIME_ZONE = os.getenv("TIME_ZONE")
 
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "evbasedb",
-        "USER": "tyty",
-        "PASSWORD": "",
-        "HOST": "localhost",
-        "PORT": "",
+        "NAME": os.getenv("DB_NAME"),
+        "USER": os.getenv("DB_USER"),
+        "PASSWORD": os.getenv("DB_PASSWORD"),
+        "HOST": os.getenv("DB_HOST"),
+        "PORT": os.getenv("DB_PORT"),
     }
 }
