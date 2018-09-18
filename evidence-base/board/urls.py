@@ -1,6 +1,8 @@
 from django.conf.urls import include, url
-from .views import AddBoardView
+from . import views
+
 
 urlpatterns = [
-    url('create/', AddBoardView.as_view()),
+    url('create/', views.add_board, name='create_board'),
+    url('view/', views.view_board, name='view_board'),
 ]
