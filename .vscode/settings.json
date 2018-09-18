@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "${workspaceFolder}/ebvenv/bin/python"
+    "python.pythonPath": "${workspaceFolder}/ebvenv/bin/python",
+    "git.ignoreLimitWarning": true
 }
