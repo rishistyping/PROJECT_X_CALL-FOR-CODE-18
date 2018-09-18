@@ -13,6 +13,7 @@ urlpatterns = [
                url(r'^test/$',views.TestPage.as_view(),name='test'),
                url(r'^thanks/$',views.ThanksPage.as_view(),name='thanks'),
                url(r'^evidence/', include('evidence.urls'),name='evidence'),
-                url(r'^board/', include('board.urls'), name='board'),
+               url(r'^board/', include('board.urls'), name='board'),
+               url(r'^category/', include('category.urls'), name='category'),
 
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

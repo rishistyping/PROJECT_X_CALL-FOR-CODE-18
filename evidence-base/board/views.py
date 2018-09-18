@@ -12,7 +12,7 @@ def view_board(request):
         'evidence_list': [
             {
                 'time_elapsed': str(i) + ' hrs ago',
-                'tags': ['tag ' + str(n) for n in [1, 2, 3]]
+                'tags': ['tag #' + str(n) for n in [1, 2, 3]]
             } for i in [1, 2, 3, 4, 5]
         ],
         'contributors': [
